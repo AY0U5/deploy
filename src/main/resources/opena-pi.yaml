@@ -1,0 +1,577 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /familleExigences:
+    get:
+      summary: List all familleExigences
+      operationId: listFamilleExigences
+      tags:
+        - familleExigences
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of familleExigences
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/FamilleExigences'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a familleExigence
+      operationId: createFamilleExigences
+      tags:
+        - familleExigences
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /familleExigences/{familleExigenceId}:
+    get:
+      summary: Info for a specific familleExigence
+      operationId: showFamilleExigenceById
+      tags:
+        - familleExigences
+      parameters:
+        - name: familleExigenceId
+          in: path
+          required: true
+          description: The id of the familleExigence to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/FamilleExigences'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjetExigences:
+    get:
+      summary: List all dossierProjetExigences
+      operationId: listDossierProjetExigences
+      tags:
+        - dossierProjetExigences
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of dossierProjetExigences
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/DossierProjetExigences'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a dossierProjetExigence
+      operationId: createDossierProjetExigences
+      tags:
+        - dossierProjetExigences
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjetExigences/{dossierProjetExigenceId}:
+    get:
+      summary: Info for a specific dossierProjetExigence
+      operationId: showDossierProjetExigenceById
+      tags:
+        - dossierProjetExigences
+      parameters:
+        - name: dossierProjetExigenceId
+          in: path
+          required: true
+          description: The id of the dossierProjetExigence to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/DossierProjetExigences'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjets:
+    get:
+      summary: List all dossierProjets
+      operationId: listDossierProjets
+      tags:
+        - dossierProjets
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of dossierProjets
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/DossierProjets'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a dossierProjet
+      operationId: createDossierProjets
+      tags:
+        - dossierProjets
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjets/{dossierProjetId}:
+    get:
+      summary: Info for a specific dossierProjet
+      operationId: showDossierProjetById
+      tags:
+        - dossierProjets
+      parameters:
+        - name: dossierProjetId
+          in: path
+          required: true
+          description: The id of the dossierProjet to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/DossierProjets'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjetExigenceAppliques:
+    get:
+      summary: List all dossierProjetExigenceAppliques
+      operationId: listDossierProjetExigenceAppliques
+      tags:
+        - dossierProjetExigenceAppliques
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of dossierProjetExigenceAppliques
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/DossierProjetExigenceAppliques'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a dossierProjetExigenceApplique
+      operationId: createDossierProjetExigenceAppliques
+      tags:
+        - dossierProjetExigenceAppliques
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjetExigenceAppliques/{dossierProjetExigenceAppliqueId}:
+    get:
+      summary: Info for a specific dossierProjetExigenceApplique
+      operationId: showDossierProjetExigenceAppliqueById
+      tags:
+        - dossierProjetExigenceAppliques
+      parameters:
+        - name: dossierProjetExigenceAppliqueId
+          in: path
+          required: true
+          description: The id of the dossierProjetExigenceApplique to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/DossierProjetExigenceAppliques'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjetExigenceEtats:
+    get:
+      summary: List all dossierProjetExigenceEtats
+      operationId: listDossierProjetExigenceEtats
+      tags:
+        - dossierProjetExigenceEtats
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of dossierProjetExigenceEtats
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/DossierProjetExigenceEtats'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a dossierProjetExigenceEtat
+      operationId: createDossierProjetExigenceEtats
+      tags:
+        - dossierProjetExigenceEtats
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjetExigenceEtats/{dossierProjetExigenceEtatId}:
+    get:
+      summary: Info for a specific dossierProjetExigenceEtat
+      operationId: showDossierProjetExigenceEtatById
+      tags:
+        - dossierProjetExigenceEtats
+      parameters:
+        - name: dossierProjetExigenceEtatId
+          in: path
+          required: true
+          description: The id of the dossierProjetExigenceEtat to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/DossierProjetExigenceEtats'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /exigences:
+    get:
+      summary: List all exigences
+      operationId: listExigences
+      tags:
+        - exigences
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of exigences
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Exigences'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a exigence
+      operationId: createExigences
+      tags:
+        - exigences
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /exigences/{exigenceId}:
+    get:
+      summary: Info for a specific exigence
+      operationId: showExigenceById
+      tags:
+        - exigences
+      parameters:
+        - name: exigenceId
+          in: path
+          required: true
+          description: The id of the exigence to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Exigences'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjetDocuments:
+    get:
+      summary: List all dossierProjetDocuments
+      operationId: listDossierProjetDocuments
+      tags:
+        - dossierProjetDocuments
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of dossierProjetDocuments
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/DossierProjetDocuments'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a dossierProjetDocument
+      operationId: createDossierProjetDocuments
+      tags:
+        - dossierProjetDocuments
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /dossierProjetDocuments/{dossierProjetDocumentId}:
+    get:
+      summary: Info for a specific dossierProjetDocument
+      operationId: showDossierProjetDocumentById
+      tags:
+        - dossierProjetDocuments
+      parameters:
+        - name: dossierProjetDocumentId
+          in: path
+          required: true
+          description: The id of the dossierProjetDocument to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/DossierProjetDocuments'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  FamilleExigence:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+      style:
+        type: string
+  FamilleExigences:
+    type: array
+    items:
+      $ref: '#/definitions/FamilleExigence'
+  DossierProjetExigence:
+    type: "object"
+    required:
+      - id
+      - commentaire
+      - enabled
+    properties:
+      id:
+        type: int
+      commentaire:
+        type: string
+      enabled:
+        type: boolean
+  DossierProjetExigences:
+    type: array
+    items:
+      $ref: '#/definitions/DossierProjetExigence'
+  DossierProjet:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+      - description
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+      description:
+        type: string
+  DossierProjets:
+    type: array
+    items:
+      $ref: '#/definitions/DossierProjet'
+  DossierProjetExigenceApplique:
+    type: "object"
+    required:
+      - id
+      - commentaire
+      - tauxPrecision
+      - pages
+    properties:
+      id:
+        type: int
+      commentaire:
+        type: string
+      tauxPrecision:
+        type: number
+      pages:
+        type: string
+  DossierProjetExigenceAppliques:
+    type: array
+    items:
+      $ref: '#/definitions/DossierProjetExigenceApplique'
+  DossierProjetExigenceEtat:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+      style:
+        type: string
+  DossierProjetExigenceEtats:
+    type: array
+    items:
+      $ref: '#/definitions/DossierProjetExigenceEtat'
+  Exigence:
+    type: "object"
+    required:
+      - id
+      - reference
+      - libelle
+      - description
+    properties:
+      id:
+        type: int
+      reference:
+        type: string
+      libelle:
+        type: string
+      description:
+        type: string
+  Exigences:
+    type: array
+    items:
+      $ref: '#/definitions/Exigence'
+  DossierProjetDocument:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+      - path
+      - content
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+      path:
+        type: string
+      content:
+        type: string
+  DossierProjetDocuments:
+    type: array
+    items:
+      $ref: '#/definitions/DossierProjetDocument'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
