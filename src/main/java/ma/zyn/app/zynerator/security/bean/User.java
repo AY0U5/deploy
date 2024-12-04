@@ -17,7 +17,7 @@ import java.util.Objects;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User  extends BaseEntity  implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "user_app_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
     protected boolean credentialsNonExpired = true;
     protected boolean enabled = true;
