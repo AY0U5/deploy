@@ -1,6 +1,8 @@
 package ma.zyn.app.zynerator.bean;
 
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Transient;
 import jakarta.persistence.MappedSuperclass;
 import java.io.Serializable;
@@ -10,7 +12,7 @@ import java.io.Serializable;
 public class BaseEntity {
 
 
-    
+    @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String label;
 
