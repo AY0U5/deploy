@@ -78,10 +78,12 @@ public class AppApplication {
 		// User Admin
         User userForAdmin = new User("admin");
 		userForAdmin.setPassword("123");
+        userForAdmin.setId(1L);
 		// Role Admin
 		Role roleForAdmin = new Role();
 		roleForAdmin.setAuthority(AuthoritiesConstants.ADMIN);
 		roleForAdmin.setCreatedAt(LocalDateTime.now());
+        roleForAdmin.setId(1L);
 		Role roleForAdminSaved = roleService.create(roleForAdmin);
 		RoleUser roleUserForAdmin = new RoleUser();
 		roleUserForAdmin.setRole(roleForAdminSaved);
@@ -105,6 +107,7 @@ public class AppApplication {
 
     private void createFamilleExigence(){
             FamilleExigence itemSuccess = new FamilleExigence();
+            itemSuccess.setId(1L);
             itemSuccess.setStyle("success");
             itemSuccess.setLibelle("Validated");
             itemSuccess.setCode("Validated");
@@ -123,6 +126,7 @@ public class AppApplication {
     }
     private void createDossierProjetExigenceEtat(){
             DossierProjetExigenceEtat itemSuccess = new DossierProjetExigenceEtat();
+            itemSuccess.setId(1L);
             itemSuccess.setStyle("success");
             itemSuccess.setLibelle("Validated");
             itemSuccess.setCode("Validated");
