@@ -113,11 +113,13 @@ public class AppApplication {
             itemSuccess.setCode("Validated");
             familleExigenceService.create(itemSuccess);
             FamilleExigence itemDanger = new FamilleExigence();
+            itemDanger.setId(2L);
             itemDanger.setStyle("danger");
             itemDanger.setLibelle("Blocked");
             itemDanger.setCode("Blocked");
             familleExigenceService.create(itemDanger);
             FamilleExigence itemWarning = new FamilleExigence();
+            itemWarning.setId(3L);
             itemWarning.setStyle("warning");
             itemWarning.setLibelle("Pending");
             itemWarning.setCode("Pending");
@@ -132,11 +134,13 @@ public class AppApplication {
             itemSuccess.setCode("Validated");
             dossierProjetExigenceEtatService.create(itemSuccess);
             DossierProjetExigenceEtat itemDanger = new DossierProjetExigenceEtat();
+            itemDanger.setId(2L);
             itemDanger.setStyle("danger");
             itemDanger.setLibelle("Rejected");
             itemDanger.setCode("Rejected");
             dossierProjetExigenceEtatService.create(itemDanger);
             DossierProjetExigenceEtat itemWarning = new DossierProjetExigenceEtat();
+            itemWarning.setId(3L);
             itemWarning.setStyle("warning");
             itemWarning.setLibelle("Pending");
             itemWarning.setCode("Pending");
