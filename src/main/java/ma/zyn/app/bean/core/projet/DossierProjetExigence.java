@@ -16,7 +16,6 @@ import java.util.Objects;
 @Entity
 @Table(name = "dossier_projet_exigence")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@SequenceGenerator(name="dossier_projet_exigence_seq",sequenceName="dossier_projet_exigence_seq",allocationSize=1, initialValue = 1)
 public class DossierProjetExigence  extends BaseEntity     {
 
 

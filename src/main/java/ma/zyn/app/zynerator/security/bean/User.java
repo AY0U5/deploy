@@ -15,10 +15,9 @@ import java.util.Objects;
 @Table(name = "user_app")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Inheritance(strategy = InheritanceType.JOINED)
-@SequenceGenerator(name = "user_app_seq", sequenceName = "user_app_seq", allocationSize = 1, initialValue = 1)
 public class User  extends BaseEntity  implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_app_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "user_app_seq")
     protected Long id;
     protected boolean credentialsNonExpired = true;
     protected boolean enabled = true;

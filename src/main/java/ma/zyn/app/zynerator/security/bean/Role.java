@@ -14,7 +14,6 @@ import ma.zyn.app.zynerator.bean.BaseEntity;
 @Entity
 @Table(name = "role_app")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@SequenceGenerator(name = "role_seq", sequenceName = "role_seq", allocationSize = 1, initialValue = 1)
 public class Role extends BaseEntity implements GrantedAuthority {
 
     private Long id;
@@ -45,7 +44,7 @@ public class Role extends BaseEntity implements GrantedAuthority {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "role_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "role_seq")
     public Long getId() {
     return this.id;
     }

@@ -9,7 +9,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "model_permission")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@SequenceGenerator(name="model_permission_seq",sequenceName="model_permission_seq",allocationSize=1, initialValue = 1)
 public class ModelPermission   extends BaseEntity     {
 
     private Long id;
@@ -38,7 +37,7 @@ public class ModelPermission   extends BaseEntity     {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="model_permission_seq")
+    @GeneratedValue(strategy =  GenerationType.IDENTITY,generator="model_permission_seq")
     public Long getId(){
     return this.id;
     }

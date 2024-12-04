@@ -17,7 +17,6 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "dossier_projet_exigence_applique")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@SequenceGenerator(name="dossier_projet_exigence_applique_seq",sequenceName="dossier_projet_exigence_applique_seq",allocationSize=1, initialValue = 1)
 public class DossierProjetExigenceApplique  extends BaseEntity     {
 
 

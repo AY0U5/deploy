@@ -10,7 +10,6 @@ import java.util.Objects;
 @Entity
 @Table(name = "referentiel_famille_exigence")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@SequenceGenerator(name="referentiel_famille_exigence_seq",sequenceName="referentiel_famille_exigence_seq",allocationSize=1, initialValue = 1)
 public class ReferentielFamilleExigence  extends BaseEntity     {
 
 

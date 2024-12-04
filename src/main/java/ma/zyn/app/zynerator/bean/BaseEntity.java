@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class BaseEntity {
 
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
     protected String label;
 

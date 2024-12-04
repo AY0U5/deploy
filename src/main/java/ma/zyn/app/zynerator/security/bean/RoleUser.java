@@ -10,7 +10,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "role_app_user_app")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@SequenceGenerator(name="role_utilisateur_seq",sequenceName="role_app_user_app_seq",allocationSize=1, initialValue = 1)
 public class RoleUser   extends BaseEntity {
 
     private Long id;
@@ -24,7 +23,7 @@ public class RoleUser   extends BaseEntity {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="role_app_user_app_seq")
+    @GeneratedValue(strategy =  GenerationType.IDENTITY,generator="role_app_user_app_seq")
     public Long getId(){
         return this.id;
     }
