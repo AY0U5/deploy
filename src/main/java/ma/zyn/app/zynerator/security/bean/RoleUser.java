@@ -23,7 +23,6 @@ public class RoleUser   extends BaseEntity {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.IDENTITY,generator="role_app_user_app_seq")
     public Long getId(){
         return this.id;
     }

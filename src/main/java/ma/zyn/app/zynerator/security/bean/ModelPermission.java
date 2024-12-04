@@ -37,7 +37,6 @@ public class ModelPermission   extends BaseEntity     {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.IDENTITY,generator="model_permission_seq")
     public Long getId(){
     return this.id;
     }

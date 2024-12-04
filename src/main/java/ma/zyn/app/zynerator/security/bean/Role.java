@@ -44,7 +44,6 @@ public class Role extends BaseEntity implements GrantedAuthority {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "role_seq")
     public Long getId() {
     return this.id;
     }

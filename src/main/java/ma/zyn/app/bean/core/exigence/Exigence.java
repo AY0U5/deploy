@@ -52,7 +52,6 @@ public class Exigence  extends BaseEntity     {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="exigence_seq")
       @Override
     public Long getId(){
         return this.id;

@@ -33,7 +33,6 @@ public class ModelPermissionUser   extends BaseEntity     {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.IDENTITY,generator="model_permission_utilisateur_seq")
     public Long getId(){
     return this.id;
     }

@@ -55,7 +55,6 @@ public class DossierProjet  extends BaseEntity     {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="dossier_projet_seq")
       @Override
     public Long getId(){
         return this.id;
