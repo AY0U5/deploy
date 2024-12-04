@@ -128,19 +128,19 @@ public class AppApplication {
     }
     private void createDossierProjetExigenceEtat(){
             DossierProjetExigenceEtat itemSuccess = new DossierProjetExigenceEtat();
-            itemSuccess.setId(1L);
+            itemSuccess.setId(5L);
             itemSuccess.setStyle("success");
             itemSuccess.setLibelle("Validated");
             itemSuccess.setCode("Validated");
             dossierProjetExigenceEtatService.create(itemSuccess);
             DossierProjetExigenceEtat itemDanger = new DossierProjetExigenceEtat();
-            itemDanger.setId(2L);
+            itemDanger.setId(6L);
             itemDanger.setStyle("danger");
             itemDanger.setLibelle("Rejected");
             itemDanger.setCode("Rejected");
             dossierProjetExigenceEtatService.create(itemDanger);
             DossierProjetExigenceEtat itemWarning = new DossierProjetExigenceEtat();
-            itemWarning.setId(3L);
+            itemWarning.setId(7L);
             itemWarning.setStyle("warning");
             itemWarning.setLibelle("Pending");
             itemWarning.setCode("Pending");
